@@ -32,9 +32,6 @@ height: 100vh;
 	color: #F03757;
 }
 
-label{
-	margin-top: 3rem;
-}
 
 #sign-in input{
 	background-color: rgba(255, 255, 255, 0.2);
@@ -84,14 +81,15 @@ label{
 }
 #registrate{
 	width: 100%;
-	position: absolute;
 	bottom: 0;
 	border-top: 1px solid #fff;
 	padding: 20px;
 	color: #fff;
+	margin-top: 55rem;
 }
 #registrate p{
 	margin: 0;
+	padding-top: 10rem;
 }
 #registrate a{
 	color: #fff;
@@ -99,6 +97,10 @@ label{
 }
 #registrate a:hover{
 	color: #F03757;
+}
+
+.regis{
+	padding-top: 10rem;
 }
 
 /*ESTILOS ERROR INPUT JS*/
