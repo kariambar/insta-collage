@@ -1,21 +1,44 @@
-var iniciar = document.getElementById("sign");
-iniciar.addEventListener("click", function(){
-	var pass = document.getElementById("pass").value;
-	var user = document.getElementById("user").value;
+// Validar login
 
-	if(user == "" || user.length == 0 || /^\s+$/.test(user)){
-		document.getElementById("user").classList.add("error");
-		document.getElementById("user").value = "";
-	} if(pass == "" || pass.length == 0 || /^\s+$/.test(pass) || pass == 123456 || pass.length < 6){
-		document.getElementById("pass").classList.add("error");
-		document.getElementById("pass").value = "";
-	}
-	else{
-		var nuevo = document.getElementById("new");
-		nuevo.setAttribute("href", "galeria.html"); //Abriendo nueva pagina
-	}
+
+function toCollage(){
+	var user = document.getElementById("user").value;
+	var pass = document.getElementById("pass").value;
+
+	var btnSesion = document.getElementsById("sign")[0];
+
+
+	if(user == ""){
+		var errorU = document.createElement("span")
+		errorU.classList.add("error-u")
+		var textU = document.createTextNode("Ingrese Usuario")
+
+		var userbien = document.getElementsByClassName("form-group")[0];
+		errorU.appendChild(textU)
+		userbien.appendChild(errorU)
 	
-});
+	}else{
+		window.location.href="collage.html"
+	}
+
+	if((pass == "") || (pass == 123456) || (pass.length<5) || (pass.length>7)){
+		var errorP = document.createElement("span")
+		errorP.classList.add("error-p")
+		var textP = document.createTextNode("Ingrese Contraseña")
+
+		var passbien = document.getElementsByClassName("form-group")[0];
+		errorP.appendChild(textP)
+		passbien.appendChild(errorP)
+
+	}else{
+		window.location.href="collage.html"
+	}
+}
+
+//Validar collage
+
+var button = document.getElementById("boton");
+button.addEventListener("click", toCollage);
 
 function drag(ev) {
   console.log(ev.target.src);
@@ -30,3 +53,4 @@ function drop(ev) {
   var idFoto = ev.dataTransfer.getData('text');
   ev.target.appendChild(document.getElementById(idFoto));
 }
+
