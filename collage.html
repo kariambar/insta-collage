@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Collage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://use.fontawesome.com/d2c9b2c5c1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body id="galeria">
+	<section id="contenido">
+        	<div class="collage" ondragover="permitirDrop(event)" ondrop="drop(event)"></div>
+    </div>
+    <div class="insta">
+    		<i class="fa fa-instagram" aria-hidden="true" class="insta-booth"></i>
+    		<p class="insta-booth">PHOTO BOOTH</p>
+    </div>
+    <div class="container-photos">
+	    	<div class="galeria" ondragover="permitirDrop(event)" ondrop="drop(event)">
+	    		<div class="col-xs-5 col-md-12 col-lg-12">
+		    	<img id="foto1" draggable="true" ondragstart="drag(event)" src="img/01.jpg" width="200">
+		        <img id="foto2" draggable="true" ondragstart="drag(event)" src="img/02.jpg" width="200">
+		        <img id="foto3" draggable="true" ondragstart="drag(event)" src="img/03.jpg" width="200">
+		       	<img id="foto4" draggable="true" ondragstart="drag(event)" src="img/04.jpg" width="200">
+		       	</div>
+		       	</div>
+		       	<div class="galeria" ondragover="permitirDrop(event)" ondrop="drop(event)">
+		       	<div class="col-xs-7 col-md-12 col-lg-12">
+	    		<img id="foto5" draggable="true" ondragstart="drag(event)" src="img/05.jpg" width="200">
+		        <img id="foto6" draggable="true" ondragstart="drag(event)" src="img/06.jpg" width="200">
+		        <img id="foto7" draggable="true" ondragstart="drag(event)" src="img/07.jpg" width="200">
+		       	<img id="foto8" draggable="true" ondragstart="drag(event)" src="img/08.jpg" width="200">
+		       	</div>
+		       </div>	
+    	</div>
+  </section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript" src="js/drag.js"></script>
+</body>
+</html>
